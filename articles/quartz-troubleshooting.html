@@ -143,13 +143,13 @@ git clone https://github.com/jackyzha0/quartz.git .</code></pre>
 
   <script>
     // Scroll to top functionality
-    const scrollButton = document.querySelector('.scroll-to-top');
+    const scrollToTopBtn = document.querySelector('.scroll-to-top');
 
     window.addEventListener('scroll', () => {
       if (window.pageYOffset > 300) {
-        scrollButton.classList.add('visible');
+        scrollToTopBtn.classList.add('visible');
       } else {
-        scrollButton.classList.remove('visible');
+        scrollToTopBtn.classList.remove('visible');
       }
     });
 
