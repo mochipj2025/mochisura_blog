@@ -451,15 +451,30 @@ body.dark-mode .tag {
 }
 
 /* ==================== Responsive Design ==================== */
+
+/* Large tablets and small desktops (768px - 1024px) */
+@media (max-width: 1024px) {
+    .container {
+        max-width: 90%;
+    }
+
+    .article-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablets (481px - 768px) */
 @media (max-width: 768px) {
     :root {
         --text-base: 1rem;
         --text-xl: 1.5rem;
         --text-2xl: 2rem;
+        --space-xl: 3rem;
     }
 
     .container {
         padding: 0 var(--space-md);
+        max-width: 100%;
     }
 
     .article-grid {
@@ -468,28 +483,297 @@ body.dark-mode .tag {
     }
 
     .site-header .container {
-        flex-direction: column;
-        gap: var(--space-sm);
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .site-title {
+        font-size: 1.25rem;
+    }
+
+    .site-nav a {
+        font-size: 0.9rem;
     }
 
     .hero {
         padding: var(--space-xl) 0;
     }
 
+    .hero h2 {
+        font-size: var(--text-xl);
+    }
+
     .article-content {
-        padding: var(--space-lg);
+        padding: var(--space-md);
+    }
+
+    .article-content h1 {
+        font-size: var(--text-xl);
+        line-height: 1.3;
+    }
+
+    .article-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .article-content h3 {
+        font-size: 1.25rem;
+    }
+
+    /* Codeブロックのスクロール対応 */
+    .article-content pre {
+        max-width: 100%;
+        overflow-x: auto;
+        font-size: 0.85rem;
+    }
+
+    /* テーブルのスクロール対応 */
+    .article-content table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
     }
 
     .category-filter {
         gap: var(--space-xs);
         padding: var(--space-md) 0;
+        flex-wrap: wrap;
+    }
+
+    .category-btn {
+        font-size: 0.85rem;
+        padding: 0.5rem var(--space-sm);
+        min-width: auto;
+    }
+
+    /* モバイルでのタッチ対応 */
+    .article-card,
+    .category-btn,
+    .theme-toggle {
+        -webkit-tap-highlight-color: rgba(255, 107, 53, 0.1);
+    }
+}
+
+/* Mobile (320px - 480px) */
+@media (max-width: 480px) {
+    :root {
+        --text-base: 0.95rem;
+        --text-xl: 1.4rem;
+        --text-2xl: 1.75rem;
+        --space-xs: 0.5rem;
+        --space-sm: 0.75rem;
+        --space-md: 1rem;
+        --space-lg: 1.5rem;
+        --space-xl: 2rem;
+    }
+
+    .container {
+        padding: 0 var(--space-sm);
+    }
+
+    .site-header {
+        padding: var(--space-sm) 0;
+    }
+
+    .site-header .container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-sm);
+    }
+
+    .site-title {
+        font-size: 1.1rem;
+    }
+
+    .site-nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .site-nav a {
+        font-size: 0.85rem;
+    }
+
+    .hero {
+        padding: var(--space-md) 0;
+    }
+
+    .hero h2 {
+        font-size: var(--text-xl);
+        line-height: 1.4;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .article-card {
+        padding: var(--space-md);
+    }
+
+    .article-card h3 {
+        font-size: 1.1rem;
+        line-height: 1.4;
+    }
+
+    .article-excerpt {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .article-meta {
+        font-size: 0.8rem;
+    }
+
+    .article-content {
+        padding: var(--space-sm);
+    }
+
+    .article-title {
+        font-size: var(--text-xl);
+        line-height: 1.3;
+        margin-bottom: var(--space-sm);
+    }
+
+    .article-content h2 {
+        font-size: 1.3rem;
+        margin-top: var(--space-lg);
+    }
+
+    .article-content h3 {
+        font-size: 1.1rem;
+        margin-top: var(--space-md);
+    }
+
+    .article-content p,
+    .article-content li {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    .article-content pre {
+        font-size: 0.8rem;
+        padding: var(--space-sm);
+        border-radius: 6px;
+    }
+
+    .article-content blockquote {
+        padding: var(--space-sm) var(--space-md);
+        margin: var(--space-md) 0;
+        font-size: 0.95rem;
+    }
+
+    .category-filter {
+        gap: 0.4rem;
+        padding: var(--space-sm) 0;
+        justify-content: flex-start;
     }
 
     .category-btn {
         font-size: 0.8rem;
-        padding: 0.4rem var(--space-sm);
+        padding: 0.4rem 0.6rem;
+        white-space: nowrap;
+    }
+
+    .tags {
+        gap: 0.4rem;
+    }
+
+    .tag {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.5rem;
+    }
+
+    .site-footer {
+        padding: var(--space-md) 0;
+        font-size: 0.85rem;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: var(--space-xs);
+    }
+
+    /* タッチデバイス最適化 */
+    a,
+    button {
+        min-height: 44px;
+        /* Appleのタッチターゲット推奨サイズ */
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .theme-toggle {
+        min-width: 44px;
+        min-height: 44px;
     }
 }
+
+/* Extra small devices (< 320px) */
+@media (max-width: 320px) {
+    :root {
+        --text-base: 0.9rem;
+        --space-xs: 0.4rem;
+        --space-sm: 0.6rem;
+        --space-md: 0.8rem;
+    }
+
+    .site-title {
+        font-size: 1rem;
+    }
+
+    .category-filter {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .category-filter::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+/* Landscape orientation adjustments */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        padding: var(--space-md) 0;
+    }
+
+    .article-content {
+        padding: var(--space-md);
+    }
+}
+
+/* Print styles */
+@media print {
+
+    .site-header,
+    .category-filter,
+    .theme-toggle,
+    .site-footer {
+        display: none;
+    }
+
+    .article-content {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    a {
+        text-decoration: underline;
+        color: #000;
+    }
+
+    pre,
+    code {
+        border: 1px solid #ddd;
+    }
+}
+
 
 /* ==================== Utilities ==================== */
 ::selection {
