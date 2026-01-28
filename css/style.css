@@ -161,11 +161,6 @@ pre code {
     top: 0;
     z-index: 100;
     backdrop-filter: blur(10px);
-    background-color: rgba(250, 248, 245, 0.9);
-}
-
-body.dark-mode .site-header {
-    background-color: rgba(26, 24, 23, 0.9);
 }
 
 .site-header .container {
