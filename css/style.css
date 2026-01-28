@@ -507,7 +507,7 @@ body.dark-mode .tag {
 
 /* Tablets (481px - 768px) */
 @media (max-width: 768px) {
-    :root {
+    html {
         --text-base: 1rem;
         --text-xl: 1.5rem;
         --text-2xl: 2rem;
@@ -598,7 +598,7 @@ body.dark-mode .tag {
 
 /* Mobile (320px - 480px) */
 @media (max-width: 480px) {
-    :root {
+    html {
         --text-base: 0.95rem;
         --text-xl: 1.4rem;
         --text-2xl: 1.75rem;
@@ -756,7 +756,7 @@ body.dark-mode .tag {
 
 /* Extra small devices (< 320px) */
 @media (max-width: 320px) {
-    :root {
+    html {
         --text-base: 0.9rem;
         --space-xs: 0.4rem;
         --space-sm: 0.6rem;
