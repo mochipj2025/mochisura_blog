@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Burn設計哲学とFlutter開発の技術ブログ">
+  <title>もちスラカルテ開発ブログ</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Fira+Code:wght@400;500&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="site-title">
+        <a href="index.html">もちスラカルテ開発ブログ</a>
+      </h1>
+      <nav class="site-nav">
+        <a href="#articles">記事</a>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="ダークモード切替">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h2>Burn設計哲学と開発記録</h2>
+      <p>本質を見極め、余分を削ぎ落とし、美しく焼き上げる。もちスラカルテプロジェクトの開発記録と設計思想。</p>
+    </section>
+
+    <!-- Category Filter -->
+    <div class="category-filter">
+      <button class="category-btn active" data-category="all" onclick="filterCategory('all')">すべて</button>
+      <button class="category-btn" data-category="burn" onclick="filterCategory('burn')">Burn設計</button>
+      <button class="category-btn" data-category="architecture"
+        onclick="filterCategory('architecture')">アーキテクチャ</button>
+      <button class="category-btn" data-category="diary" onclick="filterCategory('diary')">開発日記</button>
+      <button class="category-btn" data-category="troubleshooting"
+        onclick="filterCategory('troubleshooting')">トラブルシューティング</button>
+    </div>
+
+    <section id="articles" class="article-grid">
+      <!-- Featured Article -->
+      <article class="article-card featured" data-category="burn">
+        <h3><a href="articles/burn-philosophy.html">Burn設計哲学</a></h3>
+        <p class="article-meta">2026-01-27 | 5 min read</p>
+        <p class="article-excerpt">
+          本質を見極め、余分を削ぎ落とし、美しく焼き上げる。Burn設計は、引き算の美学と可逆性を核心とする設計思想です。
+        </p>
+        <div class="tags">
+          <span class="tag tag-burn">Burn</span>
+          <span class="tag">設計哲学</span>
+        </div>
+      </article>
+
+      <article class="article-card" data-category="diary">
+        <h3><a href="articles/mochisura-pet-dev-diary-01.html">もちスラPet開発日記 #01 - 設計の誕生</a></h3>
+        <p class="article-meta">2026-01-29 | 15 min read</p>
+        <p class="article-excerpt">
+          無形資産が有形資産へと昇華する。Burn設計哲学の新しい解釈を具現化した「もちスラPet」プロジェクトの設計記録。
+        </p>
+        <div class="tags">
+          <span class="tag tag-burn">Burn</span>
+          <span class="tag">開発日記</span>
+        </div>
+      </article>
+
+      <!-- Regular Articles -->
+      <article class="article-card" data-category="burn">
+        <h3><a href="articles/personal-burn-diary.html">個人Burn日記設計</a></h3>
+        <p class="article-meta">2026-01-27 | 7 min read</p>
+        <p class="article-excerpt">
+          個人の内面を焚き火のように静かに燃やし、灰に還す。プライバシーとメンタルケアを両立した日記システムの設計。
+        </p>
+        <div class="tags">
+          <span class="tag tag-burn">Burn</span>
+          <span class="tag">プライバシー</span>
+        </div>
+      </article>
+
+      <article class="article-card" data-category="architecture">
+        <h3><a href="articles/mochisura-platform-plan.html">もちスラ統合プラットフォーム計画</a></h3>
+        <p class="article-meta">2026-01-26 | 10 min read</p>
+        <p class="article-excerpt">
+          もちスラカルテ、Burn日記、秘密基地SNSを統合したメンタルケアプラットフォームの全体設計。
+        </p>
+        <div class="tags">
+          <span class="tag">アーキテクチャ</span>
+          <span class="tag">Flutter</span>
+        </div>
+      </article>
+
+      <article class="article-card" data-category="diary">
+        <h3><a href="articles/development-story.html">開発ストーリー</a></h3>
+        <p class="article-meta">2026-01-24 | 6 min read</p>
+        <p class="article-excerpt">
+          個人開発の苦悩と発見。もちスラカルテプロジェクトが生まれるまでの物語。
+        </p>
+        <div class="tags">
+          <span class="tag">開発日記</span>
+        </div>
+      </article>
+
+      <article class="article-card" data-category="troubleshooting">
+        <h3><a href="articles/ai-failures-and-fixes.html">AI失敗と修正記録</a></h3>
+        <p class="article-meta">2026-01-24 | 4 min read</p>
+        <p class="article-excerpt">
+          AIアシスタントとのペアプログラミングで遭遇した問題と解決策の記録。
+        </p>
+        <div class="tags">
+          <span class="tag">トラブルシューティング</span>
+          <span class="tag">AI</span>
+        </div>
+      </article>
+
+      <article class="article-card" data-category="troubleshooting">
+        <h3><a href="articles/quartz-troubleshooting.html">Quartzトラブルシューティング</a></h3>
+        <p class="article-meta">2026-01-24 | 3 min read</p>
+        <p class="article-excerpt">
+          Quartz v4でカスタムCSSが反映されない問題の調査と解決記録。
+        </p>
+        <div class="tags">
+          <span class="tag">Quartz</span>
+          <span class="tag">CSS</span>
+        </div>
+      </article>
+
+      <article class="article-card" data-category="troubleshooting">
+        <h3><a href="articles/quartz-troubleshooting-part2.html">Quartzトラブルシューティング Part 2</a></h3>
+        <p class="article-meta">2026-01-24 | 3 min read</p>
+        <p class="article-excerpt">
+          lightningcssとSCSS構文の互換性問題を深掘りした完全版トラブルシューティング。
+        </p>
+        <div class="tags">
+          <span class="tag">Quartz</span>
+          <span class="tag">SCSS</span>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 もちスラカルテ | Built with ❤️ and pure HTML/CSS</p>
+      <p class="footer-links">
+        <a href="https://www.threads.com/@hogushiya_kida" target="_blank" rel="noopener">Threads</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Simple dark mode toggle
+    function toggleTheme() {
+      document.body.classList.toggle('dark-mode');
+      const isDark = document.body.classList.contains('dark-mode');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      document.querySelector('.theme-toggle').textContent = isDark ? '☀️' : '🌙';
+    }
+
+    // Load saved theme
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+      document.querySelector('.theme-toggle').textContent = '☀️';
+    }
+
+    // Category filter function
+    function filterCategory(category) {
+      const articles = document.querySelectorAll('.article-card');
+      const buttons = document.querySelectorAll('.category-btn');
+
+      // Update active button
+      buttons.forEach(btn => {
+        if (btn.getAttribute('data-category') === category) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+
+      // Filter articles with smooth animation
+      articles.forEach(article => {
+        const articleCategory = article.getAttribute('data-category');
+
+        if (category === 'all' || articleCategory === category) {
+          article.style.display = '';
+          setTimeout(() => {
+            article.classList.remove('hidden');
+          }, 10);
+        } else {
+          article.classList.add('hidden');
+          setTimeout(() => {
+            article.style.display = 'none';
+          }, 300);
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>
