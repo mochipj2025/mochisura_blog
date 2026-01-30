@@ -315,9 +315,6 @@ Container(
       });
     }
   </script>
-  <!-- Series Navigation -->
-  <script src="../js/series-navigation.js"></script>
-
 </body>
 
 </html>

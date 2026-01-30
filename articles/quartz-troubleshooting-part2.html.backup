@@ -144,9 +144,6 @@ git push origin v4</code></pre>
       });
     }
   </script>
-  <!-- Series Navigation -->
-  <script src="../js/series-navigation.js"></script>
-
 </body>
 
 </html>
